@@ -1,0 +1,174 @@
+{
+  "input_image": "E:\\K Temp Storage\\Kitahack\\Data\\A5.png",
+  "resized_to": [
+    722,
+    584
+  ],
+  "models": {
+    "detector": "google/owlv2-base-patch16-ensemble",
+    "masks": null
+  },
+  "params": {
+    "global_thresh": 0.12,
+    "group_score_thresh": {
+      "left_equipment": 0.22,
+      "bleeding": 0.2,
+      "unknown": 0.25
+    },
+    "tile": 640,
+    "overlap": 0.25,
+    "per_tile_max": 20,
+    "nms_iou": 0.55,
+    "max_dets": 16,
+    "use_templates": false,
+    "preprocess": false,
+    "use_bleeding_heuristic": false,
+    "bleed_min_red_ratio": 0.18,
+    "bleed_min_sat": 0.25,
+    "bleed_max_area_frac": 0.08,
+    "tighten_boxes": false,
+    "use_fast_processor": false
+  },
+  "summary": {
+    "bleeding": {
+      "name": "bleeding",
+      "present": true,
+      "count": 1,
+      "top_score": 0.31573596596717834
+    },
+    "left_equipment": {
+      "name": "equipment",
+      "present": true,
+      "count": 3,
+      "top_score": 0.46368712186813354
+    }
+  },
+  "detections": [
+    {
+      "group": "left_equipment",
+      "group_name_en": "equipment",
+      "group_name_zh": "遗留器械",
+      "query": "forceps",
+      "score": 0.46368712186813354,
+      "box_xyxy": [
+        412.0,
+        376.0,
+        686.0,
+        536.0
+      ]
+    },
+    {
+      "group": "left_equipment",
+      "group_name_en": "equipment",
+      "group_name_zh": "遗留器械",
+      "query": "forceps",
+      "score": 0.4573790431022644,
+      "box_xyxy": [
+        31.25,
+        320.0,
+        384.0,
+        430.0
+      ]
+    },
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "blood pooling on tissue",
+      "score": 0.31573596596717834,
+      "box_xyxy": [
+        172.0,
+        166.0,
+        628.0,
+        436.0
+      ]
+    },
+    {
+      "group": "left_equipment",
+      "group_name_en": "equipment",
+      "group_name_zh": "遗留器械",
+      "query": "hemostat",
+      "score": 0.3048688769340515,
+      "box_xyxy": [
+        500.0,
+        264.0,
+        570.0,
+        536.0
+      ]
+    },
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "blood oozing from a point",
+      "score": 0.2885690927505493,
+      "box_xyxy": [
+        502.0,
+        260.0,
+        572.0,
+        528.0
+      ]
+    },
+    {
+      "group": "left_equipment",
+      "group_name_en": "equipment",
+      "group_name_zh": "遗留器械",
+      "query": "surgical instrument",
+      "score": 0.2538610100746155,
+      "box_xyxy": [
+        540.0,
+        172.0,
+        690.0,
+        352.0
+      ]
+    },
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "blood oozing from a point",
+      "score": 0.2465333193540573,
+      "box_xyxy": [
+        544.0,
+        524.0,
+        554.0,
+        536.0
+      ]
+    },
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "blood oozing from a point",
+      "score": 0.2107662856578827,
+      "box_xyxy": [
+        131.0,
+        396.0,
+        186.0,
+        432.0
+      ]
+    },
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "blood oozing from a point",
+      "score": 0.2018132209777832,
+      "box_xyxy": [
+        364.0,
+        282.0,
+        400.0,
+        308.0
+      ]
+    }
+  ],
+  "outputs": {
+    "pretty_image": "E:\\K Temp Storage\\Kitahack\\outputs2\\A5_pretty.jpg",
+    "compare_image": null,
+    "json": "E:\\K Temp Storage\\Kitahack\\outputs2\\A5_report.json"
+  },
+  "notes": [
+    "No-training prototype. Not clinically reliable.",
+    "Aneurysm class removed. Only bleeding + equipment remain."
+  ]
+}

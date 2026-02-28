@@ -1,0 +1,83 @@
+{
+  "input_image": "E:\\K Temp Storage\\Kitahack\\Data\\A12.jpg",
+  "resized_to": [
+    236,
+    177
+  ],
+  "models": {
+    "detector": "google/owlv2-base-patch16-ensemble",
+    "masks": null
+  },
+  "params": {
+    "global_thresh": 0.12,
+    "group_score_thresh": {
+      "left_equipment": 0.22,
+      "bleeding": 0.2,
+      "unknown": 0.25
+    },
+    "tile": 640,
+    "overlap": 0.25,
+    "per_tile_max": 20,
+    "nms_iou": 0.55,
+    "max_dets": 16,
+    "use_templates": false,
+    "preprocess": false,
+    "use_bleeding_heuristic": false,
+    "bleed_min_red_ratio": 0.18,
+    "bleed_min_sat": 0.25,
+    "bleed_max_area_frac": 0.08,
+    "tighten_boxes": false,
+    "use_fast_processor": false
+  },
+  "summary": {
+    "bleeding": {
+      "name": "bleeding",
+      "present": false,
+      "count": 0,
+      "top_score": 0.0
+    },
+    "left_equipment": {
+      "name": "equipment",
+      "present": true,
+      "count": 2,
+      "top_score": 0.4335017800331116
+    }
+  },
+  "detections": [
+    {
+      "group": "left_equipment",
+      "group_name_en": "equipment",
+      "group_name_zh": "遗留器械",
+      "query": "surgical scissors",
+      "score": 0.4335017800331116,
+      "box_xyxy": [
+        87.0,
+        39.0,
+        219.0,
+        114.5
+      ]
+    },
+    {
+      "group": "left_equipment",
+      "group_name_en": "equipment",
+      "group_name_zh": "遗留器械",
+      "query": "surgical scissors",
+      "score": 0.4139508903026581,
+      "box_xyxy": [
+        6.0,
+        28.125,
+        216.0,
+        175.0
+      ]
+    }
+  ],
+  "outputs": {
+    "pretty_image": "E:\\K Temp Storage\\Kitahack\\outputs2\\A12_pretty.jpg",
+    "compare_image": null,
+    "json": "E:\\K Temp Storage\\Kitahack\\outputs2\\A12_report.json"
+  },
+  "notes": [
+    "No-training prototype. Not clinically reliable.",
+    "Aneurysm class removed. Only bleeding + equipment remain."
+  ]
+}

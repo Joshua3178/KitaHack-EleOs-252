@@ -1,0 +1,70 @@
+{
+  "input_image": "E:\\K Temp Storage\\Kitahack\\Data\\A6.jpg",
+  "resized_to": [
+    638,
+    797
+  ],
+  "models": {
+    "detector": "google/owlv2-base-patch16-ensemble",
+    "masks": null
+  },
+  "params": {
+    "global_thresh": 0.12,
+    "group_score_thresh": {
+      "left_equipment": 0.22,
+      "bleeding": 0.2,
+      "unknown": 0.25
+    },
+    "tile": 640,
+    "overlap": 0.25,
+    "per_tile_max": 20,
+    "nms_iou": 0.55,
+    "max_dets": 16,
+    "use_templates": false,
+    "preprocess": false,
+    "use_bleeding_heuristic": false,
+    "bleed_min_red_ratio": 0.18,
+    "bleed_min_sat": 0.25,
+    "bleed_max_area_frac": 0.08,
+    "tighten_boxes": false,
+    "use_fast_processor": false
+  },
+  "summary": {
+    "bleeding": {
+      "name": "bleeding",
+      "present": false,
+      "count": 0,
+      "top_score": 0.0
+    },
+    "left_equipment": {
+      "name": "equipment",
+      "present": false,
+      "count": 0,
+      "top_score": 0.0
+    }
+  },
+  "detections": [
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "blood pooling on tissue",
+      "score": 0.23651622235774994,
+      "box_xyxy": [
+        108.0,
+        206.0,
+        578.0,
+        640.0
+      ]
+    }
+  ],
+  "outputs": {
+    "pretty_image": "E:\\K Temp Storage\\Kitahack\\outputs2\\A6_pretty.jpg",
+    "compare_image": null,
+    "json": "E:\\K Temp Storage\\Kitahack\\outputs2\\A6_report.json"
+  },
+  "notes": [
+    "No-training prototype. Not clinically reliable.",
+    "Aneurysm class removed. Only bleeding + equipment remain."
+  ]
+}

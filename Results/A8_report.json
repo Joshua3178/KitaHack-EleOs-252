@@ -1,0 +1,265 @@
+{
+  "input_image": "E:\\K Temp Storage\\Kitahack\\Data\\A8.jpg",
+  "resized_to": [
+    960,
+    785
+  ],
+  "models": {
+    "detector": "google/owlv2-base-patch16-ensemble",
+    "masks": null
+  },
+  "params": {
+    "global_thresh": 0.12,
+    "group_score_thresh": {
+      "left_equipment": 0.22,
+      "bleeding": 0.2,
+      "unknown": 0.25
+    },
+    "tile": 640,
+    "overlap": 0.25,
+    "per_tile_max": 20,
+    "nms_iou": 0.55,
+    "max_dets": 16,
+    "use_templates": false,
+    "preprocess": false,
+    "use_bleeding_heuristic": false,
+    "bleed_min_red_ratio": 0.18,
+    "bleed_min_sat": 0.25,
+    "bleed_max_area_frac": 0.08,
+    "tighten_boxes": false,
+    "use_fast_processor": false
+  },
+  "summary": {
+    "bleeding": {
+      "name": "bleeding",
+      "present": true,
+      "count": 2,
+      "top_score": 0.6001883149147034
+    },
+    "left_equipment": {
+      "name": "equipment",
+      "present": true,
+      "count": 1,
+      "top_score": 0.4239349663257599
+    }
+  },
+  "detections": [
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "blood pooling on tissue",
+      "score": 0.6001883149147034,
+      "box_xyxy": [
+        50.0,
+        2.5,
+        640.0,
+        636.0
+      ]
+    },
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "blood pooling on tissue",
+      "score": 0.550365686416626,
+      "box_xyxy": [
+        328.75,
+        155.0,
+        960.0,
+        785.0
+      ]
+    },
+    {
+      "group": "left_equipment",
+      "group_name_en": "equipment",
+      "group_name_zh": "遗留器械",
+      "query": "scalpel",
+      "score": 0.4239349663257599,
+      "box_xyxy": [
+        87.5,
+        136.0,
+        430.0,
+        368.0
+      ]
+    },
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "blood oozing from a point",
+      "score": 0.28140559792518616,
+      "box_xyxy": [
+        528.0,
+        100.0,
+        640.0,
+        268.0
+      ]
+    },
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "blood oozing from a point",
+      "score": 0.2735744118690491,
+      "box_xyxy": [
+        678.0,
+        1.875,
+        698.0,
+        185.0
+      ]
+    },
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "blood pooling on tissue",
+      "score": 0.272024542093277,
+      "box_xyxy": [
+        318.75,
+        8.75,
+        790.0,
+        636.0
+      ]
+    },
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "blood oozing from a point",
+      "score": 0.2613309323787689,
+      "box_xyxy": [
+        535.0,
+        198.0,
+        600.0,
+        264.0
+      ]
+    },
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "blood oozing from a point",
+      "score": 0.25091278553009033,
+      "box_xyxy": [
+        535.0,
+        236.0,
+        572.0,
+        264.0
+      ]
+    },
+    {
+      "group": "left_equipment",
+      "group_name_en": "equipment",
+      "group_name_zh": "遗留器械",
+      "query": "hemostat",
+      "score": 0.24944725632667542,
+      "box_xyxy": [
+        556.0,
+        145.625,
+        964.0,
+        263.0
+      ]
+    },
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "blood pooling on tissue",
+      "score": 0.24077458679676056,
+      "box_xyxy": [
+        200.0,
+        38.0,
+        608.0,
+        316.0
+      ]
+    },
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "blood oozing from a point",
+      "score": 0.23792988061904907,
+      "box_xyxy": [
+        528.0,
+        145.625,
+        688.0,
+        263.0
+      ]
+    },
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "blood oozing from a point",
+      "score": 0.22953522205352783,
+      "box_xyxy": [
+        321.5625,
+        264.0,
+        429.0,
+        368.0
+      ]
+    },
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "hemorrhage on tissue",
+      "score": 0.22815649211406708,
+      "box_xyxy": [
+        349.375,
+        2.8125,
+        662.0,
+        155.0
+      ]
+    },
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "blood oozing from a point",
+      "score": 0.20817892253398895,
+      "box_xyxy": [
+        562.0,
+        2.5,
+        584.0,
+        121.0
+      ]
+    },
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "blood oozing from a point",
+      "score": 0.2030746340751648,
+      "box_xyxy": [
+        622.0,
+        557.0,
+        780.0,
+        673.0
+      ]
+    },
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "blood oozing from a point",
+      "score": 0.20055769383907318,
+      "box_xyxy": [
+        444.0,
+        481.0,
+        620.0,
+        785.0
+      ]
+    }
+  ],
+  "outputs": {
+    "pretty_image": "E:\\K Temp Storage\\Kitahack\\outputs2\\A8_pretty.jpg",
+    "compare_image": null,
+    "json": "E:\\K Temp Storage\\Kitahack\\outputs2\\A8_report.json"
+  },
+  "notes": [
+    "No-training prototype. Not clinically reliable.",
+    "Aneurysm class removed. Only bleeding + equipment remain."
+  ]
+}

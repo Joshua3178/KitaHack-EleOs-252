@@ -1,0 +1,161 @@
+{
+  "input_image": "E:\\K Temp Storage\\Kitahack\\Data\\A13.jpg",
+  "resized_to": [
+    183,
+    276
+  ],
+  "models": {
+    "detector": "google/owlv2-base-patch16-ensemble",
+    "masks": null
+  },
+  "params": {
+    "global_thresh": 0.12,
+    "group_score_thresh": {
+      "left_equipment": 0.22,
+      "bleeding": 0.2,
+      "unknown": 0.25
+    },
+    "tile": 640,
+    "overlap": 0.25,
+    "per_tile_max": 20,
+    "nms_iou": 0.55,
+    "max_dets": 16,
+    "use_templates": false,
+    "preprocess": false,
+    "use_bleeding_heuristic": false,
+    "bleed_min_red_ratio": 0.18,
+    "bleed_min_sat": 0.25,
+    "bleed_max_area_frac": 0.08,
+    "tighten_boxes": false,
+    "use_fast_processor": false
+  },
+  "summary": {
+    "bleeding": {
+      "name": "bleeding",
+      "present": true,
+      "count": 1,
+      "top_score": 0.4234579801559448
+    },
+    "left_equipment": {
+      "name": "equipment",
+      "present": true,
+      "count": 1,
+      "top_score": 0.4831606447696686
+    }
+  },
+  "detections": [
+    {
+      "group": "left_equipment",
+      "group_name_en": "equipment",
+      "group_name_zh": "遗留器械",
+      "query": "surgical scissors",
+      "score": 0.4831606447696686,
+      "box_xyxy": [
+        9.4375,
+        122.5,
+        54.5,
+        154.0
+      ]
+    },
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "blood pooling on tissue",
+      "score": 0.4234579801559448,
+      "box_xyxy": [
+        75.5,
+        134.0,
+        122.0,
+        175.0
+      ]
+    },
+    {
+      "group": "bleeding",
+      "group_name_en": "bleeding",
+      "group_name_zh": "出血点",
+      "query": "hemorrhage on tissue",
+      "score": 0.2766905128955841,
+      "box_xyxy": [
+        73.5,
+        134.0,
+        124.0,
+        207.0
+      ]
+    },
+    {
+      "group": "left_equipment",
+      "group_name_en": "equipment",
+      "group_name_zh": "遗留器械",
+      "query": "hemostat",
+      "score": 0.2658804655075073,
+      "box_xyxy": [
+        83.0,
+        99.0,
+        127.0,
+        160.0
+      ]
+    },
+    {
+      "group": "left_equipment",
+      "group_name_en": "equipment",
+      "group_name_zh": "遗留器械",
+      "query": "surgical scissors",
+      "score": 0.25534364581108093,
+      "box_xyxy": [
+        55.5,
+        108.0,
+        94.5,
+        152.0
+      ]
+    },
+    {
+      "group": "left_equipment",
+      "group_name_en": "equipment",
+      "group_name_zh": "遗留器械",
+      "query": "surgical scissors",
+      "score": 0.25091278553009033,
+      "box_xyxy": [
+        10.75,
+        98.0,
+        122.5,
+        162.0
+      ]
+    },
+    {
+      "group": "left_equipment",
+      "group_name_en": "equipment",
+      "group_name_zh": "遗留器械",
+      "query": "hemostat",
+      "score": 0.2465333193540573,
+      "box_xyxy": [
+        81.0,
+        109.5,
+        91.5,
+        143.0
+      ]
+    },
+    {
+      "group": "left_equipment",
+      "group_name_en": "equipment",
+      "group_name_zh": "遗留器械",
+      "query": "surgical scissors",
+      "score": 0.22541658580303192,
+      "box_xyxy": [
+        41.0,
+        138.0,
+        84.0,
+        172.0
+      ]
+    }
+  ],
+  "outputs": {
+    "pretty_image": "E:\\K Temp Storage\\Kitahack\\outputs2\\A13_pretty.jpg",
+    "compare_image": null,
+    "json": "E:\\K Temp Storage\\Kitahack\\outputs2\\A13_report.json"
+  },
+  "notes": [
+    "No-training prototype. Not clinically reliable.",
+    "Aneurysm class removed. Only bleeding + equipment remain."
+  ]
+}
